@@ -1,0 +1,13 @@
+{
+    "name": "picco/yash",
+    "description": "api for picco project",
+    "authors": [
+        {
+            "name": "Yash Goyal",
+            "email": "yash.goyal@softude.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.10"
+    }
+}

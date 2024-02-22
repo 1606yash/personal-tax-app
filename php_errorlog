@@ -1,0 +1,20 @@
+[16-Nov-2023 03:55:43 UTC] PHP Parse error:  syntax error, unexpected token "," in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 17
+[16-Nov-2023 03:57:05 UTC] PHP Parse error:  syntax error, unexpected token "," in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 24
+[16-Nov-2023 03:57:45 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 44
+[16-Nov-2023 03:58:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNoParameters() on null in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 49
+[16-Nov-2023 03:59:54 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting ";" in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 39
+[16-Nov-2023 21:51:38 UTC] PHP Parse error:  syntax error, unexpected token ":" in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 14
+[16-Nov-2023 23:07:55 UTC] PHP Fatal error:  Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, null given in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 10
+[16-Nov-2023 23:35:23 UTC] PHP Fatal error:  Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, null given in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 20
+[11-Dec-2023 06:39:10 UTC] PHP Parse error:  syntax error, unexpected variable "$processedData" in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 26
+[11-Dec-2023 06:39:28 UTC] PHP Parse error:  syntax error, unexpected variable "$processedData" in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 26
+[11-Dec-2023 06:39:40 UTC] PHP Parse error:  syntax error, unexpected variable "$processedData" in /home/customer/www/picco.animainnovation.com/public_html/login/appauth.php on line 26
