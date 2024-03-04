@@ -13,12 +13,6 @@ class DB
     private $dbUsername = "root";
     private $dbPassword = "";
     private $dbName     = "db_animainnovation";
-
-
-    //  private $dbHost     = "172.31.10.34";
-    //  private $dbUsername = "user_neeraj";
-    //  private $dbPassword = "Aj@!7688990yhu";
-    //  private $dbName     = "db_animainnovation";
     
     public function __construct()
     {
