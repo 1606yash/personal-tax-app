@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "1f93927b-bd07-4f4a-9bf4-727b22c5c435",
+		"name": "picco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24479107",
+		"_collection_link": "https://lively-star-725730.postman.co/workspace/Team-Workspace~83cc1bfd-4b02-47d0-81b4-de74731e0d30/collection/24479107-1f93927b-bd07-4f4a-9bf4-727b22c5c435?action=share&source=collection_link&creator=24479107"
+	},
+	"item": [
+		{
+			"name": "Login API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5NzAxOTU2MiwiZXhwIjoxNjk3MDIzMTYyLCJuYmYiOjE2OTcwMTk1NjIsImp0aSI6IjY3R3ZZd2JRUlNvTXM2MXEiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.20vwXC32nDAw1ECLOOqJJ691VDLBjXDnf4WFmhKFAfk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/login/appauth.php",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"login",
+						"appauth.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDMyMzE3ODYsImRhdGEiOnsiZW1haWwiOiJqYS5ib2JhZGlsbGFAYW5pbWFpbm5vdmF0aW9uLmNvbSIsInBhc3N3b3JkIjoiMTIzIn19.RRJsR-OzVBMOYzVvGRs_IY-d2mUcqhaj1wX8rPw_7MI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=logout",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "logout"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Comment API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDcxMjA0MjAsImRhdGEiOnsiZW1haWwiOiJ0ZXN0QHlvcG1haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0In19.0FRkKGmOGECmOjCPHNZfaxqxOwKgBoKmWQfOXpND-ts",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/yash.goyal/Downloads/ambulance-48 (1).png"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=post-comment",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "post-comment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get General Comments By Category API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDcxMjA0MjAsImRhdGEiOnsiZW1haWwiOiJ0ZXN0QHlvcG1haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0In19.0FRkKGmOGECmOjCPHNZfaxqxOwKgBoKmWQfOXpND-ts",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=get-comments&user_id=2&category_id=1&year=2024",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "get-comments"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "category_id",
+							"value": "1"
+						},
+						{
+							"key": "year",
+							"value": "2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDMyMzc5MjEsImRhdGEiOnsiZW1haWwiOiJqYS5ib2JhZGlsbGFAYW5pbWFpbm5vdmF0aW9uLmNvbSIsInBhc3N3b3JkIjoiMTIzIn19.iVctG2UWf008UqdnbatPM3B8thhGs4c53maJqm3-EO8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category",
+							"value": "medicals",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=add-category",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "add-category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDMyMzc5MjEsImRhdGEiOnsiZW1haWwiOiJqYS5ib2JhZGlsbGFAYW5pbWFpbm5vdmF0aW9uLmNvbSIsInBhc3N3b3JkIjoiMTIzIn19.iVctG2UWf008UqdnbatPM3B8thhGs4c53maJqm3-EO8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=get-category",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "get-category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Menu API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDM3NTkzMzksImRhdGEiOnsiZW1haWwiOiJ0ZXN0QHlvcG1haWwuY29tIiwicGFzc3dvcmQiOiJUZXN0QDEyMyJ9fQ.ONdSIsLbkg8v9NKlJqV-aUWda2sDTOVSJf6VBdDQxuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "menu_name",
+							"value": "Isabelle Bobadillas",
+							"type": "text"
+						},
+						{
+							"key": "menu_icon",
+							"type": "file",
+							"src": "/C:/Users/yash.goyal/Downloads/pexels-photo-771742.webp"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=add-menu",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "add-menu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Menu API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDMyMzc5MjEsImRhdGEiOnsiZW1haWwiOiJqYS5ib2JhZGlsbGFAYW5pbWFpbm5vdmF0aW9uLmNvbSIsInBhc3N3b3JkIjoiMTIzIn19.iVctG2UWf008UqdnbatPM3B8thhGs4c53maJqm3-EO8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=get-menu",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "get-menu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Document List By Category Id API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDM1MTc4MTksImRhdGEiOnsiZW1haWwiOiJqYS5ib2JhZGlsbGFAYW5pbWFpbm5vdmF0aW9uLmNvbSIsInBhc3N3b3JkIjoiMTIzIn19.8D2wjdbCtJEPmYuL8eZNX5XqCrGleR-4iJLYQXHaHVI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=get-document-list-by-category-id&user_id=2&category_id=1&year=2022",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "get-document-list-by-category-id"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "category_id",
+							"value": "1"
+						},
+						{
+							"key": "year",
+							"value": "2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDcxMjA0MjAsImRhdGEiOnsiZW1haWwiOiJ0ZXN0QHlvcG1haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0In19.0FRkKGmOGECmOjCPHNZfaxqxOwKgBoKmWQfOXpND-ts",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/yash.goyal/Downloads/Experienced AI Developer for Custom ChatGPT Integration- Acorn Safety (Admin) 2.pdf"
+						},
+						{
+							"key": "comments",
+							"value": "hi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=post-document",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "post-document"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDMyMzc5MjEsImRhdGEiOnsiZW1haWwiOiJqYS5ib2JhZGlsbGFAYW5pbWFpbm5vdmF0aW9uLmNvbSIsInBhc3N3b3JkIjoiMTIzIn19.iVctG2UWf008UqdnbatPM3B8thhGs4c53maJqm3-EO8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "document_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=delete-document",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "delete-document"
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "document_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDM2ODY3NTAsImRhdGEiOnsiZW1haWwiOiJqYS5ib2JhZGlsbGFAYW5pbWFpbm5vdmF0aW9uLmNvbSIsInBhc3N3b3JkIjoiMTIzIn19.aI-sDUDf1g-A2c5Wb2SIqRF1RqvbVvqIM0H-_lGpJmY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "comment_id",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/functions.php?action=delete-comment",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"functions.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "delete-comment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register user API",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://picco.localhost.com/register.php",
+					"protocol": "http",
+					"host": [
+						"picco",
+						"localhost",
+						"com"
+					],
+					"path": [
+						"register.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
